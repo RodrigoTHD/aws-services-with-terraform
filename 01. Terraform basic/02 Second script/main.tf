@@ -11,20 +11,7 @@ terraform {
 
 
 provider "aws" {
-  region = "sa-east-1"
-
-  #access_key = var.aws_access_key
-  #secret_key = var.aws_secret_key
-}
-
-resource "aws_s3_bucket" "my-test-bucket" {
-  bucket = "my-tf-test-bucket-update-159753aaa321321"
-  acl    = "private"
-
-  tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
-    ManagedBy   = "Terraform"
-    Owner       = "Rolf Rodrigo Krueger"
-  }
+  region     = var.aws_region
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
 }
