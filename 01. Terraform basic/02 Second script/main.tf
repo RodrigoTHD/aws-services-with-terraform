@@ -11,10 +11,10 @@ terraform {
 
 
 provider "aws" {
-  region = "us-east-1"
+  region = "sa-east-1"
 
-  access_key = "AKIAS6VCIJ67TTHBXVPE"
-  secret_key = "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"
+  #access_key = var.aws_access_key
+  #secret_key = var.aws_secret_key
 }
 
 resource "aws_s3_bucket" "my-test-bucket" {
